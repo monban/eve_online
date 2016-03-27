@@ -6,6 +6,9 @@ describe EveOnline::Sovereignty::Campaigns do
   specify { expect(subject).to be_a(EveOnline::Base) }
   specify { expect(subject).to be_a(EveOnline::Sovereignty::Campaigns) }
   specify { expect(subject.parser).to eq(JSON) }
+  specify { expect(subject).to_not respond_to(:eveapi) }
+  specify { expect(subject).to_not respond_to(:cached_until) }
+  specify { expect(subject).to_not respond_to(:current_time) }
 
   describe '#initialize' do
     specify { expect{described_class.new}.to_not raise_error }
