@@ -15,5 +15,9 @@ module EveOnline
     def eveapi
       @eveapi ||= response.fetch('eveapi')
     end
+
+    def parser
+      @parser ||= Nori.new(advanced_typecasting: false)
+    end
   end
 end

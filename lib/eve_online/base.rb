@@ -4,12 +4,6 @@ require 'active_support/time'
 
 module EveOnline
   class Base
-    attr_reader :parser
-
-    def initialize
-      @parser = Nori.new(advanced_typecasting: false)
-    end
-
     def result
       @result ||= eveapi.fetch('result')
     end
@@ -29,6 +23,10 @@ module EveOnline
 
     def response
       @response ||= parser.parse(content)
+    end
+
+    def parser
+      raise NotImplementedError
     end
   end
 end

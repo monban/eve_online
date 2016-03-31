@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe EveOnline::Sovereignty::Campaigns do
+describe EveOnline::Campaigns do
   specify { expect(described_class::API_ENDPOINT).to eq('https://public-crest.eveonline.com/sovereignty/campaigns/') }
   specify { expect(subject.url).to eq(described_class::API_ENDPOINT) }
   specify { expect(subject).to be_a(EveOnline::Base) }
-  specify { expect(subject).to be_a(EveOnline::Sovereignty::Campaigns) }
+  specify { expect(subject).to be_a(EveOnline::Campaigns) }
   specify { expect(subject.parser).to eq(JSON) }
   specify { expect(subject).to_not respond_to(:eveapi) }
   specify { expect(subject).to_not respond_to(:cached_until) }

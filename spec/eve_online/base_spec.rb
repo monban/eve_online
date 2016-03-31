@@ -1,19 +1,6 @@
 require 'spec_helper'
 
 describe EveOnline::Base do
-  describe '#initialize' do
-    let(:parser) { double }
-
-    before do
-      #
-      # Nori.new(advanced_typecasting: false) => double
-      #
-      expect(Nori).to receive(:new).with(advanced_typecasting: false).and_return(parser)
-    end
-
-    its(:parser) { should eq(parser) }
-  end
-
   describe '#result' do
     before do
       #
