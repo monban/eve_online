@@ -1,7 +1,7 @@
 module EveOnline
   module Eve
     # https://eveonline-third-party-documentation.readthedocs.org/en/latest/xmlapi/eve_characterid/
-    class CharacterID < Base
+    class CharacterID < XmlApi
       API_ENDPOINT = 'https://api.eveonline.com/eve/CharacterID.xml.aspx'.freeze
 
       attr_reader :names

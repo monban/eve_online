@@ -1,7 +1,7 @@
 module EveOnline
   module Characters
     # https://eveonline-third-party-documentation.readthedocs.org/en/latest/xmlapi/char_assetlist/
-    class AssetList < Base
+    class AssetList < XmlApi
       API_ENDPOINT = 'https://api.eveonline.com/char/AssetList.xml.aspx'.freeze
 
       attr_reader :key_id, :v_code, :character_id, :flat

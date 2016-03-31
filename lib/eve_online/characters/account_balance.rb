@@ -1,7 +1,7 @@
 module EveOnline
   module Characters
     # https://eveonline-third-party-documentation.readthedocs.org/en/latest/xmlapi/char_accountbalance/
-    class AccountBalance < Base
+    class AccountBalance < XmlApi
       API_ENDPOINT = 'https://api.eveonline.com/char/AccountBalance.xml.aspx'.freeze
 
       attr_reader :key_id, :v_code, :character_id

@@ -1,6 +1,7 @@
 require 'eve_online/version'
 
 require 'eve_online/base'
+require 'eve_online/xml_api'
 require 'eve_online/blueprint'
 require 'eve_online/bookmark'
 require 'eve_online/bookmark_folder'
