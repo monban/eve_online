@@ -27,7 +27,5 @@ require 'eve_online/eve/character_id'
 require 'eve_online/server/status'
 require 'eve_online/campaigns'
 
-require 'eve_online/crest/base'
-
 module EveOnline
 end
